@@ -1,0 +1,22 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = []
+
+        for num in nums:
+            if num in seen:
+                return True
+            
+            seen.append(num)
+        
+        return False
+
+     '''
+     for each instance ( that you iterate through the array of nums )
+
+     check -> if that value has been seen (exist in seen)
+
+        yes - return True
+
+        no - return False
+        
+     '''
