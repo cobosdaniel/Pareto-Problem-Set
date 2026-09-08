@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+
+    '''
+    Anagram's are when two words have the exact same amount of of each letter
+
+    sorted - prints out a string alphabetically 
+
+    if both words are anagrams then they should both return the same sorted string
+
+    return - return the boolean value
+    
+    '''
