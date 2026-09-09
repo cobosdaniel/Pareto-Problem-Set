@@ -1,0 +1,26 @@
+from collections import defaultdict
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anagrams = defaultdict(list)
+
+        for word in strs:
+            key = "".join(sorted(word))
+
+            anagrams[key].append(word)
+
+        return list(anagrams.values())
+
+
+
+
+'''
+For each instance
+
+check if the key exist - using default dict to create any new instance
+
+sort the word to retrieve its anagram
+
+store the current word instance into its proper list using the anagram as a key
+
+return as a list using list(dict.values())
+'''
