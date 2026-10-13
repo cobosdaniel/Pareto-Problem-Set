@@ -12,3 +12,10 @@ class Solution:
     return - return the boolean value
     
     '''
+'''
+10/13
+return statement - initally forgotten
+'''
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t) 

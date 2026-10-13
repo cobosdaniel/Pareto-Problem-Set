@@ -20,3 +20,16 @@ class Solution:
         no - return False
         
      '''
+    '''
+    10/13
+    seen.append(num)
+    For something to be seen in a list needs to be added first.
+    '''
+class Solution:
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        seen = []
+        for num in nums:
+            if num in seen:
+                return True
+            seen.append(num)
+        return False
