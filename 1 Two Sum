@@ -14,3 +14,23 @@ class Solution:
 '''
 two pointer?
 '''
+
+
+"""
+10/13
+need to be returning the index of the pair that makes up the target, and the current index
+
+then make sure to be storing the correct values - storing the current index in the value (the inverse of having the value in that index)
+"""
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        seen = {}
+        
+        for index, num in enumerate(nums):
+            pair = target - num
+            if pair in seen:
+                # return [index, seen[num]]
+                return [seen[pair], index]
+            # seen[num] = pair
+            seen[num] = index
+
