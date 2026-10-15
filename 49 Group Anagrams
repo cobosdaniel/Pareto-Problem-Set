@@ -24,3 +24,22 @@ store the current word instance into its proper list using the anagram as a key
 
 return as a list using list(dict.values())
 '''
+
+'''
+10/15/26
+'''
+
+from collections import defaultdict
+class Solution:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        anagrams = defaultdict(list)
+
+        # for word in list:
+        for word in strs:
+            key = "".join(sorted(word))
+
+            anagrams[key].append(word)
+
+        return list(anagrams.values())
+
+        
